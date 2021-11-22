@@ -1,0 +1,82 @@
+* {
+  font-family: nunito, rubik, montserrat, roboto, sans-serif;
+}
+
+body {
+  background-color: #000;
+}
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+}
+
+.principal-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  height: 100vh;
+  padding: 50px;
+  margin: 0px auto;
+  background-image: url(../../assets/images/desktop-background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.principal-content h1, .principal-content h2, .principal-content h3, .principal-content p {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0px;
+  color: #fff;
+  animation-name: principal-content;
+  animation-duration: 2s;
+}
+.principal-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+.principal-content h2, .principal-content h3, .principal-content p {
+  font-weight: 500;
+}
+.principal-content h3 {
+  margin-bottom: 50px;
+}
+.principal-content p {
+  margin: 30px 0px;
+}
+.principal-content_button strong {
+  color: #000;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.principal-content_button strong:hover {
+  background: #ff6f00;
+  color: #fff;
+  transition: 0.3s;
+}
+.principal-content_bold {
+  font-weight: bold;
+}
+
+@keyframes principal-content {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

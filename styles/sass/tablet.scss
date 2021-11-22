@@ -1,0 +1,101 @@
+@import "_variables.scss";
+
+* {
+    font: {
+        family: nunito, rubik, montserrat, roboto, sans-serif;
+    }
+}
+
+body {
+    background-color: $second-color;
+}
+
+.principal-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1023px;
+    height: 100vh;
+    padding: 50px;
+    margin: 0px auto;
+    background: {
+        image: url(../../assets/images/tablet-background.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    }
+}
+
+.principal-content {
+    h1, h2, h3, p {
+    font: {
+    size: 16px;
+    weight: 600;
+    }
+    line-height: 1.6;
+    text-align: center;
+    margin: 0px;
+    color: $primary-color;
+    animation-name: principal-content;
+    animation-duration: 2s;
+    }
+    h1 {
+        font: {
+            size: 32px;
+            weight: bold;
+        }
+        margin: {
+            bottom: 30px;
+        }
+    }
+
+    h2, h3, p {
+        font-weight: 500;
+    }
+
+    h3 {
+        margin: {
+            bottom: 30px;
+        }
+    }
+
+    p {
+        margin: 20px 0px;
+    }
+
+    &_button strong {
+        color: $second-color;
+        background: {
+            color: $primary-color;
+        }
+        font: {
+            size: 16px;
+            weight: bold;
+        }
+        padding: 10px 20px ;
+        border: {
+            radius: 4px;
+        }
+        cursor: pointer;
+        &:hover {
+            background: $third-color;
+            color: $primary-color;
+            transition: 0.3s;
+        }
+    }
+
+    &_bold {
+        font-weight: bold;
+    }
+    
+}
+
+@keyframes principal-content {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
