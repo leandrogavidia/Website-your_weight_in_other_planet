@@ -89,6 +89,39 @@ body {
     
 }
 
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    background: $second-color;
+    nav {
+        padding: 0;
+        ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: $primary-color;
+            }
+
+            a:active {
+                color: $third-color;
+            }
+
+            li:nth-child(2) {
+                padding: 16px 0;
+            }
+            li:last-child {
+                padding-top: 16px;
+            }
+        }
+    }
+}
+
 @keyframes principal-content {
     from {
         opacity: 0;

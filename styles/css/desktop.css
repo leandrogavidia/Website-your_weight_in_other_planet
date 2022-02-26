@@ -68,6 +68,43 @@ body::-webkit-scrollbar-thumb {
   font-weight: bold;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: #000;
+}
+.footer nav {
+  padding: 0;
+}
+.footer nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.footer nav ul a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer nav ul a:active {
+  color: #ff6f00;
+}
+.footer nav ul a:hover {
+  color: #ff6f00;
+}
+.footer nav ul li {
+  display: inline-block;
+}
+.footer nav ul li:nth-child(2) {
+  padding: 0 16px;
+}
+.footer nav ul li:last-child {
+  padding-left: 16px;
+}
+
 @keyframes principal-content {
   from {
     opacity: 0;
