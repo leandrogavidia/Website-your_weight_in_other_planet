@@ -9,6 +9,7 @@ const gNeptune = 11.15;
 const gPK = 98.07;
 
 let container = document.getElementById("containerResult");
+let button = document.getElementById("eventButton");
 
 function yourWeightInOhterPlanet() {
     let userWeight = parseFloat(prompt("Hi!, what is your weight?"));
@@ -62,7 +63,5 @@ function yourWeightInOhterPlanet() {
         container.innerHTML = `<p><strong>Your weight in the Kaio-sama planet is:</strong> ${weightResult} kilos, amazing! 😲</p>\n<h3>This answer is result of a error. Please you enter a value correct from 1 to 8.</h3>`;
     } 
 }
-
-let button = document.getElementById("eventButton");
 
 button.addEventListener("click", yourWeightInOhterPlanet);
