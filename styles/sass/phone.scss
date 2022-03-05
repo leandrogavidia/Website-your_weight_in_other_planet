@@ -132,6 +132,8 @@ input[type=number] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation-name: weight-content;
+    animation-duration: 2s;
 
     div {
         display: flex;
@@ -185,6 +187,17 @@ input[type=number] {
 }
 
 @keyframes principal-content {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+
+  @keyframes weight-content {
     from {
         opacity: 0;
         transform: scale(0);
