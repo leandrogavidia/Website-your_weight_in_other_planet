@@ -3,6 +3,7 @@
 * {
     font: {
         family: nunito, rubik, montserrat, roboto, sans-serif;
+        box-sizing: border-box;
     }
 }
 
@@ -15,6 +16,26 @@ body {
         background: rgba(255,255,255,0.7);
         border-radius: 5px;
     }
+}
+
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+input[type=number] {
+
+    -moz-appearance:textfield;
+
+}
+
+:focus {
+    outline: 1px solid $third-color;
 }
 
 .principal-content {
@@ -69,30 +90,13 @@ body {
         margin: 30px 0px;
     }
 
-    &_button strong {
-        color: $second-color;
-        background: {
-            color: $primary-color;
-        }
-        font: {
-            size: 20px;
-            weight: bold;
-        }
-        padding: 10px 20px ;
-        border: {
-            radius: 4px;
-        }
-        cursor: pointer;
-        &:hover {
-            background: $third-color;
-            color: $primary-color;
-            transition: 0.3s;
-        }
-    }
-
     &_bold {
         font-weight: bold;
     }
+}
+
+#containerResult {
+    margin-top: 24px;
 }
 
 .footer {
@@ -132,6 +136,57 @@ body {
             li:last-child {
                 padding-left: 16px;
             }
+        }
+    }
+}
+
+#weight-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    input {
+        margin-right: 32px;
+        padding: 12px;
+        border-radius: 4px;
+        border: none;
+        &:focus-visible {
+           outline: 2px solid $third-color;
+        }
+
+    }
+    select {
+        margin-right: 32px;
+        background: white;
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:focus-visible {
+            outline: 2px solid $third-color;
+        }
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 14px;
+        border-radius: 6px;
+        color: $second-color;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $third-color;
+            color: $primary-color;
         }
     }
 }

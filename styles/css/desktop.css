@@ -1,5 +1,6 @@
 * {
   font-family: nunito, rubik, montserrat, roboto, sans-serif;
+  font-box-sizing: border-box;
 }
 
 body {
@@ -11,6 +12,20 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:focus {
+  outline: 1px solid #ff6f00;
 }
 
 .principal-content {
@@ -50,22 +65,12 @@ body::-webkit-scrollbar-thumb {
 .principal-content p {
   margin: 30px 0px;
 }
-.principal-content_button strong {
-  color: #000;
-  background-color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.principal-content_button strong:hover {
-  background: #ff6f00;
-  color: #fff;
-  transition: 0.3s;
-}
 .principal-content_bold {
   font-weight: bold;
+}
+
+#containerResult {
+  margin-top: 24px;
 }
 
 .footer {
@@ -103,6 +108,55 @@ body::-webkit-scrollbar-thumb {
 }
 .footer nav ul li:last-child {
   padding-left: 16px;
+}
+
+#weight-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+#weight-container div {
+  display: flex;
+  flex-direction: column;
+}
+#weight-container label {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+#weight-container input {
+  margin-right: 32px;
+  padding: 12px;
+  border-radius: 4px;
+  border: none;
+}
+#weight-container input:focus-visible {
+  outline: 2px solid #ff6f00;
+}
+#weight-container select {
+  margin-right: 32px;
+  background: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#weight-container select:focus-visible {
+  outline: 2px solid #ff6f00;
+}
+#weight-container button {
+  background: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#weight-container button:hover {
+  background-color: #ff6f00;
+  color: #fff;
 }
 
 @keyframes principal-content {

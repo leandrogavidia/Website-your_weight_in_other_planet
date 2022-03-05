@@ -23,11 +23,33 @@
 
             <h2>You know that your weight is not same depending of the planet in where you live? 🤔 <br> <br> In sumary, your weight will depend of the gravity of the planet in where you live.</h2>
 
-            <p><span class="principal-content_bold">For example:</span> If your weight is 52.4 on the Earth, on Mars is 19.7. It is amazing, right? 🤯</p>
+            <p><span class="principal-content_bold">For example:</span> If your weight is 52.4 on the Earth, on Mars is 19.8. It is amazing, right? 🤯</p>
 
             <h3><span class="principal-content_bold">Here you will know your weight in the next planets:</span> Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.</h3>
 
-            <p class="principal-content_button"><strong id="eventButton">I want know my weight on...</strong></p>
+            <form id="weight-container">
+                <div>
+                    <label for="weight">How much do you weight?</label>
+                    <input type="number" id="weight" placeholder="Weight">
+                </div>
+                
+                <div>
+                    <label for="planet">Choose a planet</label>
+                    <select name="planet" id="planet">
+                        <option value="mercury">Mercury</option>
+                        <option value="venus">Venus</option>
+                        <option value="earth">Earth</option>
+                        <option value="mars">Mars</option>
+                        <option value="jupiter">Jupiter</option>
+                        <option value="saturn">Saturn</option>
+                        <option value="uranus">Uranus</option>
+                        <option value="neptune">Neptune</option>
+                        <option value="kaiosama">Kaio-sama planet</option>
+                    </select>
+                </div>
+
+                <button class="principal-content_button" id="eventButton" type="button">See your weight</button> 
+            </form> 
 
             <div id="containerResult"></div>
                         

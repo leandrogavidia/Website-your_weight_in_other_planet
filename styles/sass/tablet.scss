@@ -3,12 +3,34 @@
 * {
     font: {
         family: nunito, rubik, montserrat, roboto, sans-serif;
+        box-sizing: border-box;
     }
 }
 
 body {
     background-color: $second-color;
 }
+
+input[type=number]::-webkit-outer-spin-button,
+
+input[type=number]::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+input[type=number] {
+
+    -moz-appearance:textfield;
+
+}
+
+:focus {
+    outline: 1px solid $third-color;
+}
+
 
 .principal-content {
     display: flex;
@@ -89,6 +111,10 @@ body {
     
 }
 
+#containerResult {
+    margin-top: 24px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;
@@ -118,6 +144,57 @@ body {
             li:last-child {
                 padding-top: 16px;
             }
+        }
+    }
+}
+
+#weight-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    label {
+        color: $primary-color;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    input {
+        margin-right: 32px;
+        padding: 12px;
+        border-radius: 4px;
+        border: none;
+        &:focus-visible {
+            outline: 2px solid $third-color;
+        }
+
+    }
+    select {
+        margin-right: 32px;
+        background: white;
+        border: none;
+        padding: 12px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:focus-visible {
+            outline: 2px solid $third-color;
+        }
+    }
+    button {
+        background: $primary-color;
+        border: none;
+        padding: 14px;
+        border-radius: 6px;
+        color: $second-color;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $third-color;
+            color: $primary-color;
         }
     }
 }
